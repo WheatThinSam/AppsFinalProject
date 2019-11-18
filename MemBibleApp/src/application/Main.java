@@ -6,7 +6,8 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-// my nam Jacob this is
+// my nam Jacob this 
+
 
 public class Main extends Application {
 	@Override
