@@ -8,7 +8,6 @@ import javafx.scene.Scene;
 
 // my nam Jacob this 
 
-
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
