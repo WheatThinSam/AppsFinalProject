@@ -10,7 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MemBibleCotroller {
+public class MemBibleController {
 	
 	@FXML
 	public void changeViewDV(ActionEvent event) throws IOException {
@@ -22,30 +22,30 @@ public class MemBibleCotroller {
 		window.show();
 		
 	}
-	
+	@FXML
 	public void changeViewM(ActionEvent event) throws IOException {
 		
-		Parent newView = FXMLLoader.load(getClass().getResource("DailyVerse.html"));
+		Parent newView = FXMLLoader.load(getClass().getResource("/application/view/Memorize.fxml"));
 		Scene newViewScene =  new Scene(newView);
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setScene(newViewScene);
 		window.show();
 		
 	}
-
+	@FXML
 	public void changeViewC(ActionEvent event) throws IOException {
 	
-		Parent newView = FXMLLoader.load(getClass().getResource("DailyVerse.html"));
+		Parent newView = FXMLLoader.load(getClass().getResource("/application/view/Challenges.fxml"));
 		Scene newViewScene =  new Scene(newView);
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setScene(newViewScene);
 		window.show();
 	
 	}
-
+	@FXML
 	public void changeViewR(ActionEvent event) throws IOException {
 		
-		Parent newView = FXMLLoader.load(getClass().getResource("DailyVerse.html"));
+		Parent newView = FXMLLoader.load(getClass().getResource("/application/view/Read.fxml"));
 		Scene newViewScene =  new Scene(newView);
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setScene(newViewScene);
