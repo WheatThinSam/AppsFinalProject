@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MemBibleController">
    <children>
       <Pane prefHeight="524.0" prefWidth="525.0">
          <children>
@@ -15,6 +16,11 @@
                   <Font size="31.0" />
                </font>
             </Label>
+            <ImageView fx:id="goHome" fitHeight="55.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Pics/340.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>

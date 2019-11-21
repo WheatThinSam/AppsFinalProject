@@ -52,4 +52,14 @@ public class MemBibleController {
 		window.show();
 		
 	}
+	
+	@FXML
+	public void goHome(ActionEvent event) throws IOException {
+		Parent newView = FXMLLoader.load(getClass().getResource("/application/view/AppView.fxml"));
+		Scene newViewScene = new Scene(newView);
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(newViewScene);
+		window.show();
+	}
+	
 }
