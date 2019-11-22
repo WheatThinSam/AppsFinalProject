@@ -62,4 +62,6 @@ public class MemBibleController {
 		window.show();
 	}
 	
+	@FXML
+	public void 
 }
