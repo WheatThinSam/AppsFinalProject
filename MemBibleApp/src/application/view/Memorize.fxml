@@ -19,6 +19,7 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Button layoutX="368.0" layoutY="235.0" mnemonicParsing="false" onAction="#changeViewMV" text="Button" />
          </children></Pane>
    </children>
 </AnchorPane>

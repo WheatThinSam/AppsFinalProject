@@ -8,9 +8,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 public class MemBibleController {
+	@FXML
+	public TextArea memVerse;
+	public Label memVerseTimeCount;
 	
 	@FXML
 	public void changeViewDV(ActionEvent event) throws IOException {
@@ -63,5 +68,23 @@ public class MemBibleController {
 	}
 	
 	@FXML
-	public void 
+	public void showVerse() {
+		memVerse.setOpacity(1);
+	}
+	
+	@FXML
+	public void hideVerse() {
+		memVerse.setOpacity(0);
+	}
+	
+	@FXML
+	public void changeViewMV(ActionEvent event) throws IOException {
+		
+		Parent newView = FXMLLoader.load(getClass().getResource("/application/view/MemVerse.fxml"));
+		Scene newViewScene =  new Scene(newView);
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(newViewScene);
+		window.show();
+		
+	}
 }
