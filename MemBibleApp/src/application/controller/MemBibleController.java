@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 
 public class MemBibleController {
 	
+
+	
 	@FXML
 	public void changeViewDV(ActionEvent event) throws IOException {
 		
@@ -62,6 +64,5 @@ public class MemBibleController {
 		window.show();
 	}
 	
-	@FXML
-	public void 
+
 }
