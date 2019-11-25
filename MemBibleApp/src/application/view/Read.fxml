@@ -10,6 +10,8 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MemBibleController">
    <children>
@@ -43,7 +45,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button fx:id="book" mnemonicParsing="false" prefHeight="31.0" prefWidth="297.0" text="John" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Button fx:id="book" mnemonicParsing="false" onAction="#compileBook" prefHeight="31.0" prefWidth="297.0" text="John" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                            </children>
                         </GridPane>
                      </content>
@@ -65,7 +67,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button fx:id="chapter" mnemonicParsing="false" prefHeight="31.0" prefWidth="297.0" text="3" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Button fx:id="chapter" mnemonicParsing="false" onAction="#compileChap" prefHeight="31.0" prefWidth="297.0" text="3" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                            </children>
                         </GridPane>
                      </content></Tab>
@@ -86,12 +88,17 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button fx:id="verse" mnemonicParsing="false" prefHeight="31.0" prefWidth="297.0" text="16" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Button fx:id="verse" mnemonicParsing="false" onAction="#changeViewRD" prefHeight="31.0" prefWidth="297.0" text="16" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                            </children>
                         </GridPane>
                      </content></Tab>
               </tabs>
             </TabPane>
+            <Text fx:id="book_Chap_Verse" layoutX="83.0" layoutY="23.0" stroke="#252525" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Chap:Verse" wrappingWidth="220.6708984375">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
          </children></Pane>
    </children>
 </AnchorPane>
