@@ -1,25 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MemBibleController">
    <children>
-      <Pane prefHeight="500.0" prefWidth="800.0">
+      <SplitPane fx:id="split" layoutY="32.0" opacity="0.0" orientation="VERTICAL" prefHeight="479.0" prefWidth="810.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="268.0" prefWidth="798.0">
+               <children>
+                  <TextArea fx:id="memVerse" layoutX="181.0" layoutY="12.0" opacity="0.0" prefHeight="206.0" prefWidth="437.0" text="This is just a test..... but, John 1: 11-13 says &quot;He came to His&#10;own, and His own did not recieve Him, but as many as&#10;recieved Him, to them He gave the right to become children &#10;of God. To those who were born not of blood nor of will of &#10;the flesh, nor of the will of man, but born of God.&quot;" wrapText="true" />
+                  <Button layoutX="70.0" layoutY="58.0" mnemonicParsing="false" onAction="#showVerse" text="Show Verse" />
+                  <Button layoutX="70.0" layoutY="131.0" mnemonicParsing="false" onAction="#hideVerse" prefHeight="31.0" prefWidth="97.0" text="Hide Verse" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Pane fx:id="select" layoutY="-1.0" prefHeight="511.0" prefWidth="810.0">
          <children>
             <Button mnemonicParsing="false" onAction="#goHome" prefHeight="31.0" prefWidth="74.0">
                <graphic>
-                  <ImageView fx:id="goHome" fitHeight="26.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="26.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../Pics/340.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="368.0" layoutY="235.0" mnemonicParsing="false" onAction="#changeViewMV" text="Button" />
-         </children></Pane>
+            <TabPane layoutX="-1.0" layoutY="32.0" prefHeight="469.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="245.0" tabMinWidth="244.0">
+               <tabs>
+                  <Tab text="Book">
+                     <content>
+                        <GridPane prefHeight="423.0" prefWidth="760.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="book" mnemonicParsing="false" onAction="#compileBook" prefHeight="31.0" prefWidth="297.0" text="John" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Chapter">
+                     <content>
+                        <GridPane prefHeight="423.0" prefWidth="760.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="chapter" mnemonicParsing="false" onAction="#compileChap" prefHeight="31.0" prefWidth="297.0" text="3" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Verse">
+                     <content>
+                        <GridPane prefHeight="423.0" prefWidth="760.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="verse" mnemonicParsing="false" onAction="#compileVerseMem" prefHeight="31.0" prefWidth="297.0" text="16" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <Text fx:id="book_Chap_Verse" layoutX="83.0" layoutY="23.0" stroke="#252525" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Chap:Verse" wrappingWidth="220.6708984375">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
