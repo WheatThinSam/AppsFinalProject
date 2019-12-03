@@ -46,7 +46,7 @@ public class MemBibleController {
 			wViewer.getEngine().load("https://www.youtube.com/watch?v=CHc46MMVWkI&t=637s");
 		}
 		else if (choice == "Faith") {
-			wViewer.getEngine().load("");
+			wViewer.getEngine().load("https://www.youtube.com/watch?v=GGnWqBGJKAg");
 		}
 		else if (choice == "Relationships") {
 			wViewer.getEngine().load("https://www.youtube.com/watch?v=H7h5BHax06c&vl=en");
