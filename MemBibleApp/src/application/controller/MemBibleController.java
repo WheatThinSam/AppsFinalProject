@@ -80,8 +80,7 @@ public class MemBibleController {
 	}
 	
 	@FXML
-	public void compileVerse(ActionEvent event) throws IOException {
-		book_Chap_Verse.setText(book_Chap_Verse.getText() + ":" + verse.getText());
+	public void read(ActionEvent event) throws IOException {
 		read.toFront();
 		read.setOpacity(1);
 		select.setOpacity(0);
