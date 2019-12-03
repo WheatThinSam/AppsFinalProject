@@ -1,6 +1,7 @@
 package application.controller;
 
 import java.io.IOException;
+import java.util.Random;
 
 import application.model.Bible;
 import javafx.event.ActionEvent;
@@ -140,10 +141,14 @@ public class MemBibleController {
 	}
 	
 	@FXML
-	public void daily(ActionEvent event) {
+	public void daily(ActionEvent event) throws IOException {
+		Random rand = new Random();
 		split.toFront();
 		select.setOpacity(0);
 		select.toBack();
 		split.setOpacity(1);
+		asv = new Bible();
+		asv.loadBible();
+		memVerse.setText(asv.setTextVerseInt(rand.nextInt(878)));
 	}
 }
