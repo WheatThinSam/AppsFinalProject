@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Random;
 
 import application.model.Bible;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Labeled;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
@@ -30,35 +32,30 @@ public class MemBibleController {
 	public Pane read, select;
 	public SplitPane split;
 	public Bible asv;
+	public ComboBox choice;
 	
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/WheatThinSam/AppsFinalProject.git
 	
 	@FXML
 	public ComboBox<String> combobox;
-	
-	combobox.addAll("Prayer", "Faith", "Relationships", "Fasting", "Missions");
 	
 	@FXML
 	public WebView wViewer = new WebView();
 	
 	@FXML
-	public void processChallenge(Action event) throws IOException {
-		public String choice = (ComboBox)choice.getText();
+	public void processChallenge(ActionEvent event) throws IOException {
+	    
 		
-		if(choice == "Prayer") {
+		if(((Button) event.getSource()).getText() == "Prayer") {
 			wViewer.getEngine().load("https://www.youtube.com/watch?v=CHc46MMVWkI&t=637s");
 		}
-		else if (choice == "Faith") {
+		else if (((Button) event.getSource()).getText() == "Faith") {
 			wViewer.getEngine().load("https://www.youtube.com/watch?v=GGnWqBGJKAg");
 		}
-		else if (choice == "Relationships") {
+		else if (((Button) event.getSource()).getText() == "Relationships") {
 			wViewer.getEngine().load("https://www.youtube.com/watch?v=H7h5BHax06c&vl=en");
 		}
 			
-		else if (choice == "Fasting") {
+		else if (((Button) event.getSource()).getText() == "Fasting") {
 			wViewer.getEngine().load("https://www.youtube.com/watch?v=wckWsKr7-78");
 		}
 		else {
