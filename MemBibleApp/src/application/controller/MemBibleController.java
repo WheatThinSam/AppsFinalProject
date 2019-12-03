@@ -30,6 +30,11 @@ public class MemBibleController {
 	public SplitPane split;
 	public Bible asv;
 	
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/WheatThinSam/AppsFinalProject.git
+	
 	@FXML
 	public ComboBox<String> combobox;
 	
@@ -80,7 +85,7 @@ public class MemBibleController {
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		window.setScene(newViewScene);
 		window.show();
-
+		
 	}
 
 	@FXML
@@ -107,12 +112,12 @@ public class MemBibleController {
 
 	@FXML
 	public void compileBook(ActionEvent event) {
-		book_Chap_Verse.setText(book.getText());
+		book_Chap_Verse.setText(((Button) event.getSource()).getText());
 	}
 
 	@FXML
 	public void compileChap(ActionEvent event) {
-		book_Chap_Verse.setText(book_Chap_Verse.getText() + " " + chapter.getText());
+		book_Chap_Verse.setText(book_Chap_Verse.getText() + " " + ((Button) event.getSource()).getText());
 	}
 
 	@FXML
@@ -127,7 +132,7 @@ public class MemBibleController {
 
 	@FXML
 	public void compileVerseMem(ActionEvent event) throws IOException {
-		book_Chap_Verse.setText(book_Chap_Verse.getText() + ":" + verse.getText());
+		book_Chap_Verse.setText(book_Chap_Verse.getText() + ":" + ((Button) event.getSource()).getText());
 		split.toFront();
 		split.setOpacity(1);
 		select.setOpacity(0);
@@ -166,5 +171,12 @@ public class MemBibleController {
 		window.show();
 
 	}
-
+	
+	@FXML
+	public void daily(ActionEvent event) {
+		split.toFront();
+		select.setOpacity(0);
+		select.toBack();
+		split.setOpacity(1);
+	}
 }

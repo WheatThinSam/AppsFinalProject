@@ -59,4 +59,10 @@ public class Bible {
 		}
 		return yo;
 	}
+	
+	public String setTextVerseInt(int ver) {
+		String yo = "";
+		yo = bible.get(ver).getBook_chap_verse() + ": " + bible.get(ver).getVerse();
+		return yo;
+	}
 }

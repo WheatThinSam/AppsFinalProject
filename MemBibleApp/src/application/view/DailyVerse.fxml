@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,22 +13,44 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MemBibleController">
    <children>
-      <Pane prefHeight="500.0" prefWidth="800.0">
+      <SplitPane fx:id="split" dividerPositions="0.5" orientation="VERTICAL" prefHeight="521.0" prefWidth="820.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="268.0" prefWidth="808.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goHome" prefHeight="23.0" prefWidth="74.0">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Pics/340.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="70.0" layoutY="58.0" mnemonicParsing="false" onAction="#showVerse" text="Show Verse" />
+                  <Button layoutX="70.0" layoutY="131.0" mnemonicParsing="false" onAction="#hideVerse" prefHeight="31.0" prefWidth="97.0" text="Hide Verse" />
+                  <TextArea fx:id="memVerse" layoutX="194.0" layoutY="6.0" opacity="0.0" prefHeight="250.0" prefWidth="421.0" text="This is just a test..... but, John 1: 11-13 says &quot;He came to His&#10;own, and His own did not recieve Him, but as many as&#10;recieved Him, to them He gave the right to become children &#10;of God. To those who were born not of blood nor of will of &#10;the flesh, nor of the will of man, but born of God.&quot;" wrapText="true" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+         </items>
+      </SplitPane>
+      <Pane prefHeight="521.0" prefWidth="818.0">
          <children>
-            <Label layoutX="177.0" layoutY="108.0" prefHeight="102.0" prefWidth="172.0" text="IT WORKS">
+            <DialogPane layoutX="-1.0" prefHeight="521.0" prefWidth="820.0">
+               <graphic>
+                  <Button mnemonicParsing="false" onAction="#daily" prefHeight="93.0" prefWidth="821.0" text="Todays Verse -&gt;" />
+               </graphic>
+            </DialogPane>
+            <ImageView fitHeight="429.0" fitWidth="820.0" layoutX="-1.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Pics/Bible.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="488.0" layoutY="306.0" prefHeight="210.0" prefWidth="325.0" text="Thy word is a lamp unto my feet and a light unto my path.   Psalm 119:105" textFill="WHITE" wrapText="true">
                <font>
-                  <Font size="31.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#goHome" prefHeight="31.0" prefWidth="74.0">
-               <graphic>
-                  <ImageView fx:id="goHome" fitHeight="26.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Pics/340.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
          </children>
       </Pane>
    </children>
