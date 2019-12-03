@@ -28,6 +28,7 @@ public class MemBibleController {
 	public Pane read, select;
 	public SplitPane split;
 	public Bible asv;
+	
 
 	@FXML
 	public ComboBox<String> combobox;
@@ -137,5 +138,12 @@ public class MemBibleController {
 		window.show();
 
 	}
-
+	
+	@FXML
+	public void daily(ActionEvent event) {
+		split.toFront();
+		select.setOpacity(0);
+		select.toBack();
+		split.setOpacity(1);
+	}
 }
