@@ -1,5 +1,6 @@
 package application.controller;
 
+import javafx.scene.web.WebView;
 import java.io.IOException;
 import java.util.Random;
 
@@ -30,10 +31,42 @@ public class MemBibleController {
 	public SplitPane split;
 	public Bible asv;
 	
+<<<<<<< HEAD
+=======
 
+>>>>>>> branch 'master' of https://github.com/WheatThinSam/AppsFinalProject.git
+	
 	@FXML
 	public ComboBox<String> combobox;
-
+	
+	combobox.addAll("Prayer", "Faith", "Relationships", "Fasting", "Missions");
+	
+	@FXML
+	public WebView wViewer = new WebView();
+	
+	@FXML
+	public void processChallenge(Action event) throws IOException {
+		public String choice = (ComboBox)choice.getText();
+		
+		if(choice == "Prayer") {
+			wViewer.getEngine().load("https://www.youtube.com/watch?v=CHc46MMVWkI&t=637s");
+		}
+		else if (choice == "Faith") {
+			wViewer.getEngine().load("https://www.youtube.com/watch?v=GGnWqBGJKAg");
+		}
+		else if (choice == "Relationships") {
+			wViewer.getEngine().load("https://www.youtube.com/watch?v=H7h5BHax06c&vl=en");
+		}
+			
+		else if (choice == "Fasting") {
+			wViewer.getEngine().load("https://www.youtube.com/watch?v=wckWsKr7-78");
+		}
+		else {
+			wViewer.getEngine().load("https://www.youtube.com/watch?v=1FIzTihe5-M");
+		}
+		
+	}
+	
 	@FXML
 	public void changeViewDV(ActionEvent event) throws IOException {
 
