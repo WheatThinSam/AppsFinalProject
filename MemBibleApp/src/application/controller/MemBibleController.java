@@ -45,17 +45,17 @@ public class MemBibleController {
 	public void processChallenge(ActionEvent event) throws IOException {
 	    
 		
-		if(((Button) event.getSource()).getText() == "Prayer") {
+		if(((Button) event.getSource()).getText().compareToIgnoreCase("Prayer") == 0) {
 			wViewer.getEngine().load("https://www.youtube.com/watch?v=CHc46MMVWkI&t=637s");
 		}
-		else if (((Button) event.getSource()).getText() == "Faith") {
+		else if (((Button) event.getSource()).getText().compareToIgnoreCase("Faith") == 0) {
 			wViewer.getEngine().load("https://www.youtube.com/watch?v=GGnWqBGJKAg");
 		}
-		else if (((Button) event.getSource()).getText() == "Relationships") {
+		else if (((Button) event.getSource()).getText().compareToIgnoreCase("Relationships") == 0) {
 			wViewer.getEngine().load("https://www.youtube.com/watch?v=H7h5BHax06c&vl=en");
 		}
 			
-		else if (((Button) event.getSource()).getText() == "Fasting") {
+		else if (((Button) event.getSource()).getText().compareToIgnoreCase("Fasting") == 0) {
 			wViewer.getEngine().load("https://www.youtube.com/watch?v=wckWsKr7-78");
 		}
 		else {

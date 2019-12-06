@@ -19,7 +19,7 @@
                   <Font size="29.0" />
                </font>
             </Text>
-            <WebView fx:id="wView" layoutX="102.0" layoutY="81.0" prefHeight="399.0" prefWidth="600.0" />
+            <WebView fx:id="wViewer" layoutX="102.0" layoutY="81.0" prefHeight="399.0" prefWidth="600.0" />
             <ButtonBar layoutX="96.0" layoutY="33.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="619.0">
               <buttons>
                 <Button mnemonicParsing="false" onAction="#processChallenge" text="Fasting" />
